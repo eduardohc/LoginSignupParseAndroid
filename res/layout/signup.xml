@@ -36,7 +36,7 @@
         android:text="@string/password" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/etNewPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="30"
@@ -73,6 +73,7 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:onClick="startSignUp"
         android:text="@string/signUp" />
 
 </LinearLayout>
