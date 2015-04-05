@@ -1,10 +1,12 @@
 package com.example.abogados;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.ParseUser;
 
@@ -34,6 +36,17 @@ public class Welcome extends Activity{
 	
 	public void initLogOut(View v){
 		ParseUser.logOut();
+		
+		Toast.makeText(getApplicationContext(), 
+				"Logging out...", Toast.LENGTH_LONG).show();
+		
+		initWelcomeRegistration();
+	}
+	
+	//Call the mainpage WelcomeRegistration again
+	public void initWelcomeRegistration(){
+		Intent intent = new Intent(this, WelcomeRegistration.class);
+		startActivity(intent);
 		finish();
 	}
 }
